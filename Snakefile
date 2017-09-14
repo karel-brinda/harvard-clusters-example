@@ -8,17 +8,17 @@ localrules: all, index
 
 rule all:
 	input:
-		"alignments.bam"
+		["alignments.{}.bam".format(x) for x in ("ex1", "ex2")]
 
-rule index:
+rule bwa:
 	input:
 		index="data/ref.fa",
-		reads="data/reads.fq",
+		reads="data/reads.{id}.fq",
 	output:
-		bam="alignments.bam",
+		bam="alignments.{id}.bam",
 	conda: "env.bwa.yaml"
 	benchmark:
-		"benchmarks/bwa_log.log"
+		"benchmarks/bwa.{id}.log"
 	shell:
 		"""
 			bwa mem "{input.index}" "{input.reads}" \
