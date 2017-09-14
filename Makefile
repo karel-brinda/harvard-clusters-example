@@ -9,7 +9,7 @@ all:
 
 orchestra:
 	snakemake --cores 9999 -p \
-		--use-conda --conda-prefix /n/scratch2/kbrinda/conda-envs \
+		--use-conda --conda-prefix /n/scratch2/${USER}/conda-envs \
 		--cluster-config cluster.orchestra.json \
 		--cluster 'bsub -q {cluster.queue} -n {cluster.n} -W {cluster.time} -R "rusage[mem={cluster.memory}]"'
 
