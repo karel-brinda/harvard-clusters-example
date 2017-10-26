@@ -3,8 +3,8 @@
 This repository contains an example of a simple Snakemake pipeline that can be
 run on all three Harvard clusters - Odyssey, Orchestra and O2.
 
-Each cluster has own configuration JSON file (e.g., `cluster.orchestra.json`
-for Odyssey).  These files specify requested memory, time, queue and number of
+Each cluster has own configuration JSON file (e.g., `cluster.o2.json`
+for O2).  These files specify requested memory, time, queue and number of
 threads, and they can be further adjusted.
 
 All required programs are installed automatically using BioConda, based on the
