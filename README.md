@@ -1,7 +1,9 @@
 # Harvard clusters - example
 
 This repository contains an example of a simple Snakemake pipeline that can be
-run on all three Harvard clusters - Odyssey, Orchestra and O2.
+run on all three Harvard clusters - 
+[Odyssey](https://www.rc.fas.harvard.edu/resources/odyssey-quickstart-guide/),
+[Orchestra](https://rc.hms.harvard.edu/) and [O2](https://wiki.rc.hms.harvard.edu/display/O2/O2).
 
 Each cluster has own configuration JSON file (e.g., `cluster.o2.json`
 for O2).  These files specify requested memory, time, queue and number of
