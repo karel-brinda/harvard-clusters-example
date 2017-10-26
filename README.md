@@ -10,6 +10,11 @@ threads, and they can be further adjusted.
 All required programs are installed automatically using BioConda, based on the
 environment specification in `env.bwa.yaml`, unless a `_*` rule is used.
 
+## Prerequisites
+
+* [GNU Make](https://www.gnu.org/software/make/)
+* [Snakemake](https://snakemake.readthedocs.io)
+* [BioConda](https://bioconda.github.io/)
 
 ## Commands
 
@@ -19,4 +24,4 @@ environment specification in `env.bwa.yaml`, unless a `_*` rule is used.
 * `make _orchestra` - submit jobs to Orchestra and don't use BioConda for SW installation
 * `make o2` - submit jobs to O2
 * `make _o2` - submit jobs to O2 and don't use BioConda for SW installation
-* `make clean` - remove generated files
+* `make clean` - remove all generated files
