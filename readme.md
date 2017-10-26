@@ -7,13 +7,16 @@ Each cluster has own configuration JSON file (e.g., `cluster.orchestra.json`
 for Odyssey).  These files specify requested memory, time, queue and number of
 threads, and they can be further adjusted.
 
-All required programs are installed automatically using Conda, based on the
+All required programs are installed automatically using BioConda, based on the
 environment specification in `env.bwa.yaml`.
 
 
 ## Commands
 
-* `make odyssey` - submit the jobs to Odyssey
-* `make orchestra` - submit the jobs to Orchestra
-* `make o2` - submit the jobs to O2
+* `make odyssey` - submit jobs to Odyssey
+* `make _odyssey` - submit jobs to Odyssey and don't use BioConda for SW installation
+* `make orchestra` - submit jobs to Orchestra
+* `make _orchestra` - submit jobs to Orchestra and don't use BioConda for SW installation
+* `make o2` - submit jobs to O2
+* `make _o2` - submit jobs to O2 and don't use BioConda for SW installation
 * `make clean` - remove generated files
