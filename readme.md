@@ -8,7 +8,7 @@ for O2).  These files specify requested memory, time, queue and number of
 threads, and they can be further adjusted.
 
 All required programs are installed automatically using BioConda, based on the
-environment specification in `env.bwa.yaml`.
+environment specification in `env.bwa.yaml`, unless a `_*` rule is used.
 
 
 ## Commands
