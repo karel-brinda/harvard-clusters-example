@@ -7,22 +7,22 @@ SHELL=/usr/bin/env bash
 all:
 	snakemake --use-conda --cores -p
 
+CONDA=--use-conda --conda-prefix /n/scratch2/${USER}/conda-envs
 o2:
-	CONDA=--use-conda --conda-prefix /n/scratch2/${USER}/conda-envs¬
 	snakemake --cores 9999 -p \
 		$(CONDA) \
 		--cluster-config cluster.o2.json \
 		--cluster 'sbatch -p {cluster.queue} -n {cluster.n} -t {cluster.time} --mem={cluster.memory}'
 
+CONDA=--use-conda --conda-prefix /scratch/${USER}/conda-envs
 odyssey:
-	CONDA=--use-conda --conda-prefix /scratch/${USER}/conda-envs¬
 	snakemake --cores 9999 -p \
 		$(CONDA) \
 		--cluster-config cluster.odyssey.json \
 		--cluster 'sbatch -p {cluster.queue} -n {cluster.n} -t {cluster.time} --mem={cluster.memory}'
 
+CONDA=--use-conda --conda-prefix /n/scratch2/${USER}/conda-envs
 orchestra:
-	CONDA=--use-conda --conda-prefix /n/scratch2/${USER}/conda-envs¬
 	snakemake --cores 9999 -p \
 		$(CONDA) \
 		--cluster-config cluster.orchestra.json \
